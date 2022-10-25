@@ -1,11 +1,12 @@
 package com.validate.model;
 
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 public class User {
-    @NotEmpty(message = "{name.empty}")
+    @NotBlank(message = "name.not.empty")
     @Size(min = 2, max = 30, message = "Chỉ chứa từ 2-30 ký tự")
     private String name;
 
